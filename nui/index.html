@@ -31,24 +31,24 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="nav flex-column nav-pills p-2 shadow-lg" id="v-pills-tab" role="tablist" aria-orientation="vertical" style="background:rgba(51, 51, 51, 0.8); border-radius: 5px;">
-                                <a class="nav-link active m-1" id="bankingHome-tab" data-toggle="pill" href="#bankingHome" role="tab" aria-controls="bankingHome" aria-selected="true" style="color: white">Account Home</a>
-                                <a class="nav-link m-1" id="bankingWithdraw-tab" data-toggle="pill" href="#bankingWithdraw" role="tab" aria-controls="bankingWithdraw" aria-selected="false" style="color: white">Withdrawals</a>
-                                <a class="nav-link m-1" id="bankingDeposit-tab" data-toggle="pill" href="#bankingDeposit" role="tab" aria-controls="bankingDeposit" aria-selected="false" style="color: white">Deposit</a>
-                                <a class="nav-link m-1" id="bankingTransfer-tab" data-toggle="pill" href="#bankingTransfer" role="tab" aria-controls="bankingTransfer" aria-selected="false" style="color: white">Transfer</a>
+                                <a class="nav-link active m-1" id="bankingHome-tab" data-toggle="pill" href="#bankingHome" role="tab" aria-controls="bankingHome" aria-selected="true" style="color: white">Accueil</a>
+                                <a class="nav-link m-1" id="bankingWithdraw-tab" data-toggle="pill" href="#bankingWithdraw" role="tab" aria-controls="bankingWithdraw" aria-selected="false" style="color: white">Retrait</a>
+                                <a class="nav-link m-1" id="bankingDeposit-tab" data-toggle="pill" href="#bankingDeposit" role="tab" aria-controls="bankingDeposit" aria-selected="false" style="color: white">Depot</a>
+                                <a class="nav-link m-1" id="bankingTransfer-tab" data-toggle="pill" href="#bankingTransfer" role="tab" aria-controls="bankingTransfer" aria-selected="false" style="color: white">Transfere</a>
                                 <!-- <a class="nav-link m-1" id="bankingStatement-tab" data-toggle="pill" href="#bankingStatement" role="tab" aria-controls="bankingStatement" aria-selected="false" style= "color: white">Statement</a> -->
-                                <a class="nav-link m-1" id="bankingSavings-tab" style="display:none; color: white;" data-toggle="pill" href="#bankingSavings" role="tab" aria-controls="bankingSavings" aria-selected="false">Savings Account</a>
-                                <a class="nav-link m-1" id="bankingActions-tab" data-toggle="pill" href="#bankingActions" role="tab" aria-controls="bankingActions" aria-selected="false" style="color: white">Account Options</a>
+                                <a class="nav-link m-1" id="bankingSavings-tab" style="display:none; color: white;" data-toggle="pill" href="#bankingSavings" role="tab" aria-controls="bankingSavings" aria-selected="false">Compte épargne</a>
+                                <a class="nav-link m-1" id="bankingActions-tab" data-toggle="pill" href="#bankingActions" role="tab" aria-controls="bankingActions" aria-selected="false" style="color: white">Options</a>
                             </div>
                         </div>
                     </div>
                     <div class="row mt-2">
                         <div class="col-12">
                             <div class="card mb-3" style="background:rgba(51, 51, 51, 0.8); color: white;">
-                                <div class="card-header">Account Information</div>
+                                <div class="card-header">Information de compte</div>
                                 <div class="card-body">
                                     <p class="card-text" style="color: white;"><small>
-                                        Account Name: <span id="accountName"></span><br>
-                                        Account Number: <span id="accountNumber"></span><br>
+                                        Nom du compte: <span id="accountName"></span><br>
+                                        Numero de compte: <span id="accountNumber"></span><br>
                                         <!--Account Sort Code: <span id="accountSortCode">-->
 
                                         </span></small></p>
@@ -58,7 +58,7 @@
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <button class="btn btn-block" id="logoffbutton" style="background-color: #DC143C; color: white">Logoff</button>
+                            <button class="btn btn-block" id="logoffbutton" style="background-color: #DC143C; color: white">Deconnexion</button>
                         </div>
                     </div>
                 </div>
@@ -70,7 +70,7 @@
                         <div class="container-fluid p-2">
                             <div class="row">
                                 <div class="col-12 title">
-                                    <h3 style="font-size: 35px;">Welcome, <span id="customerName"></span></h3>
+                                    <h3 style="font-size: 35px;">Bienvenue, <span id="customerName"></span></h3>
                                 </div>
                             </div>
                             <div class="row" id="successRow" style="display:none;">
@@ -81,19 +81,19 @@
                             <div class="row">
                                 <div class="col-6">
                                     <div class="card mb-3" style="background:rgba(51, 51, 51, 0.8); color: white;">
-                                        <div class="card-header"><i class="fad fa-fw fa-money-bill-wave"></i> Current Bank Balance:</div>
+                                        <div class="card-header"><i class="fad fa-fw fa-money-bill-wave"></i> Solde compte:</div>
                                         <div class="card-body">
                                             <h5 class="card-title" style="font-weight: bolder; color: #28a745;" id="currentBalance"></h5>
-                                            <p class="card-text" style="color: white;">Total Amount Available To Withdraw/Transfer</p>
+                                            <p class="card-text" style="color: white;">Montant disponible pour un retrait/transfere</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="card mb-3" style="background:rgba(51, 51, 51, 0.8); color: white;">
-                                        <div class="card-header"><i class="fad fa-fw fa-coin"></i> Current Cash Balance:</div>
+                                        <div class="card-header"><i class="fad fa-fw fa-coin"></i> Argent liquide:</div>
                                         <div class="card-body">
                                             <h5 class="card-title" style="font-weight: bolder; color: #28a745;" id="currentCashBalance"></h5>
-                                            <p class="card-text" style="color: white;">Total Amount Available To Deposit</p>
+                                            <p class="card-text" style="color: white;">Montant total d'argent à deposer</p>
                                         </div>
                                     </div>
                                 </div>
@@ -101,25 +101,25 @@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="card mb-3" style="background:rgba(51, 51, 51, 0.8);">
-                                        <div class="card-header" style="color: white"><i class="fad fa-fw fa-pencil-alt"></i> Quick Actions:</div>
+                                        <div class="card-header" style="color: white"><i class="fad fa-fw fa-pencil-alt"></i> Actions rapide:</div>
                                         <div class="card-body">
                                             <div class="container-fluid">
                                                 <div class="row m-1">
-                                                    <div class="col-4"><button class="btn btn-primary btn-block" data-action="deposit" data-amount="100">Deposit $100</button></div>
-                                                    <div class="col-4"><button class="btn btn-primary btn-block" data-action="deposit" data-amount="1000">Deposit $1,000</button></div>
-                                                    <div class="col-4"><button class="btn btn-primary btn-block" data-action="deposit" data-amount="10000">Deposit $10,000</button></div>
+                                                    <div class="col-4"><button class="btn btn-primary btn-block" data-action="deposit" data-amount="100">Dépot $100</button></div>
+                                                    <div class="col-4"><button class="btn btn-primary btn-block" data-action="deposit" data-amount="1000">Dépot $1,000</button></div>
+                                                    <div class="col-4"><button class="btn btn-primary btn-block" data-action="deposit" data-amount="10000">Dépot $10,000</button></div>
                                                 </div>
                                                 <div class="row m-1">
-                                                    <div class="col-4"><button class="btn btn-secondary btn-block" data-action="withdraw" data-amount="100">Withdraw $100</button></div>
-                                                    <div class="col-4"><button class="btn btn-secondary btn-block" data-action="withdraw" data-amount="1000">Withdraw $1,000</button></div>
-                                                    <div class="col-4"><button class="btn btn-secondary btn-block" data-action="withdraw" data-amount="10000">Withdraw $10,000</button></div>
+                                                    <div class="col-4"><button class="btn btn-secondary btn-block" data-action="withdraw" data-amount="100">Retrait $100</button></div>
+                                                    <div class="col-4"><button class="btn btn-secondary btn-block" data-action="withdraw" data-amount="1000">Retrait $1,000</button></div>
+                                                    <div class="col-4"><button class="btn btn-secondary btn-block" data-action="withdraw" data-amount="10000">Retrait $10,000</button></div>
                                                 </div>
                                                 <div class="row m-1">
                                                     <div class="col-6">
-                                                        <button class="btn btn-info btn-block" id="savingsQuicky1" style="display:none;" data-action="savingsdeposit" data-amount="10000">Transfer $10,000 from Bank to Savings</button>
+                                                        <button class="btn btn-info btn-block" id="savingsQuicky1" style="display:none;" data-action="savingsdeposit" data-amount="10000">Transfere $10,000 du compte courant vers le compte épargne</button>
                                                     </div>
                                                     <div class="col-6">
-                                                        <button class="btn btn-info btn-block" id="savingsQuicky2" style="display:none;" data-action="savingswithdraw" data-amount="10000">Transfer $10,000 from Savings to Bank</button>
+                                                        <button class="btn btn-info btn-block" id="savingsQuicky2" style="display:none;" data-action="savingswithdraw" data-amount="10000">Transfere $10,000 du compte épargne vers le compte en banque</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -133,30 +133,30 @@
                         <div class="container-fluid p-2" style="position: relative; top: 54px;">
                             <div class="row">
                                 <div class="col-12 title">
-                                    <h3 style="font-size: 35px;">Withdrawals</h3>
+                                    <h3 style="font-size: 35px;">Retraits</h3>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-12" style="font-size: 12px; color: white;">
-                                    Withdrawal money from your bank account. To withdrawal money from your savings account, first you must transfer it.
+                                    Retirer de l'argent de votre compte bancaire. Pour retirer de l'argent de votre compte d'épargne, vous devez d'abord le transférer.
                                 </div>
                             </div>
                             <div class="row" style="position: relative; top: 20px;">
                                 <div class="col-6">
                                     <div class="card mb-3" style="background:rgba(51, 51, 51, 0.8); color: white;">
-                                        <div class="card-header"><i class="fad fa-fw fa-money-bill-wave"></i> Current Bank Balance:</div>
+                                        <div class="card-header"><i class="fad fa-fw fa-money-bill-wave"></i> Solde compte:</div>
                                         <div class="card-body">
                                             <h5 class="card-title" style="font-weight: bolder; color: #28a745;" id="currentBalance1"></h5>
-                                            <p class="card-text" style="color: white;">Total Amount Available To Withdraw/Transfer</p>
+                                            <p class="card-text" style="color: white;">Montant total disponible pour retrait/transfére</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="card mb-3" style="background:rgba(51, 51, 51, 0.8); color: white;">
-                                        <div class="card-header"><i class="fad fa-fw fa-coin"></i> Current Cash Balance:</div>
+                                        <div class="card-header"><i class="fad fa-fw fa-coin"></i> Argent liquide disponible:</div>
                                         <div class="card-body">
                                             <h5 class="card-title" style="font-weight: bolder; color: #28a745;" id="currentCashBalance1"></h5>
-                                            <p class="card-text" style="color: white;">Total Amount Available To Deposit</p>
+                                            <p class="card-text" style="color: white;">Montant disponible a transferer</p>
                                         </div>
                                     </div>
                                 </div>
@@ -174,7 +174,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="row mt-2">
-                                                    <div class="col-3 my-auto" style="font-size: 19px; color: white;"><label for="withdrawAmount"><small>Amount to Withdraw:</small></label></div>
+                                                    <div class="col-3 my-auto" style="font-size: 19px; color: white;"><label for="withdrawAmount"><small>Montant à retirer:</small></label></div>
                                                     <div class="col-9"><input type="number" placeholder="$" class="form-control" id="withdrawAmount" name="withdrawAmount"></div>
                                                 </div>
                                             </div>
@@ -184,7 +184,7 @@
                                 </div>
                             </div>
                             <div class="row" style="position: relative; top: 20px;">
-                                <div class="col-12 text-center"><button class="btn" style="background-color: #28a745; color: white" id="initiateWithdraw">Complete Withdrawal</button></div>
+                                <div class="col-12 text-center"><button class="btn" style="background-color: #28a745; color: white" id="initiateWithdraw">Retrait effectué</button></div>
                             </div>
                         </div>
                     </div>
@@ -192,30 +192,30 @@
                         <div class="container-fluid p-2" style="position: relative; top: 54px;">
                             <div class="row">
                                 <div class="col-12 title">
-                                    <h3 style="font-size: 35px;">Deposits</h3>
+                                    <h3 style="font-size: 35px;">Dépots</h3>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-12" style="font-size: 12px; color: white;">
-                                    Deposit money into your bank account. To deposit money into your savings account, simply transfer it from your bank after your initial deposit.
+                                    Déposez de l'argent sur votre compte bancaire. Pour déposer de l'argent sur votre compte d'épargne, transférez-le simplement de votre banque après votre dépôt initial.
                                 </div>
                             </div>
                             <div class="row" style="position: relative; top: 20px;">
                                 <div class="col-6">
                                     <div class="card mb-3" style="background:rgba(51, 51, 51, 0.8); color: white;">
-                                        <div class="card-header"><i class="fad fa-fw fa-money-bill-wave"></i> Current Bank Balance:</div>
+                                        <div class="card-header"><i class="fad fa-fw fa-money-bill-wave"></i> Solde compte courant:</div>
                                         <div class="card-body">
                                             <h5 class="card-title" style="font-weight: bolder; color: #28a745;" id="currentBalance2"></h5>
-                                            <p class="card-text" style="color: white;">Total Amount Available To Withdraw/Transfer</p>
+                                            <p class="card-text" style="color: white;">Montant total disponible pour retirer/transférer</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="card mb-3" style="background:rgba(51, 51, 51, 0.8); color: white;">
-                                        <div class="card-header"><i class="fad fa-fw fa-coin"></i> Current Cash Balance:</div>
+                                        <div class="card-header"><i class="fad fa-fw fa-coin"></i> Montant d'espece:</div>
                                         <div class="card-body">
                                             <h5 class="card-title" style="font-weight: bolder; color: #28a745;" id="currentCashBalance2"></h5>
-                                            <p class="card-text" style="color: white;">Total Amount Available To Deposit</p>
+                                            <p class="card-text" style="color: white;">Montant total disponible pour le dépôt</p>
                                         </div>
                                     </div>
                                 </div>
@@ -233,7 +233,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="row mt-2">
-                                                    <div class="col-3 my-auto" style="font-size: 19px; color: white;"><label for="depositAmount"><small>Amount to Deposit:</small></label></div>
+                                                    <div class="col-3 my-auto" style="font-size: 19px; color: white;"><label for="depositAmount"><small>Montant à déposer</small></label></div>
                                                     <div class="col-9"><input type="number" placeholder="$" class="form-control" id="depositAmount" name="depositAmount"></div>
                                                 </div>
                                             </div>
@@ -243,7 +243,7 @@
                                 </div>
                             </div>
                             <div class="row" style="position: relative; top: 20px;">
-                                <div class="col-12 text-center"><button class="btn" style="background-color: #28a745; color: white" id="initiateDeposit">Complete Deposit</button></div>
+                                <div class="col-12 text-center"><button class="btn" style="background-color: #28a745; color: white" id="initiateDeposit">Dépot effectué</button></div>
                             </div>
                         </div>
                     </div>
@@ -252,11 +252,11 @@
                         <div class="container-fluid p-2" style="position: relative; top: 54px;">
                             <div class="row">
                                 <div class="col-12 title">
-                                    <h3 style="font-size: 35px;">Transfers</h3>
+                                    <h3 style="font-size: 35px;">Transfere</h3>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-12" style="font-size: 12px; color:white">Transfer money to another account simply by entering the dedicated number of that account and the amount to transfer.
+                                <div class="col-12" style="font-size: 12px; color:white">Transférez de l'argent sur un autre compte en entrant simplement le numéro dédié de ce compte et le montant à transférer.
                                 </div>
                             </div>
                             <div class="row">
@@ -276,11 +276,11 @@
                                                         <!-- form -->
                                                         <div class="container-fluid">
                                                             <div class="row m-1">
-                                                                <div class="col-3 my-auto" style="font-size: 19px; color: white;"><label for="transferAcctNo"><small>Account Number:</small></label></div>
+                                                                <div class="col-3 my-auto" style="font-size: 19px; color: white;"><label for="transferAcctNo"><small>Numero de compte:</small></label></div>
                                                                 <div class="col-9"><input type="text" id="transferAcctNo" name="transferAcctNo" class="form-control"></div>
                                                             </div>
                                                             <div class="row m-1">
-                                                                <div class="col-3 my-auto" style="font-size: 19px; color: white;"><label for="transferAmount"><small>Amount To Transfer:</small></label></div>
+                                                                <div class="col-3 my-auto" style="font-size: 19px; color: white;"><label for="transferAmount"><small>Montant à deposer:</small></label></div>
                                                                 <div class="col-9"><input type="number" id="transferAmount" name="transferAmount" class="form-control" placeholder="$"></div>
                                                             </div>
                                                         </div>
@@ -294,7 +294,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-12 text-center" style="position: relative; top: 20px;">
-                                    <button class="btn" id="initiateTransfer" style="background-color: #28a745; color: white">Complete Transfer</button>
+                                    <button class="btn" id="initiateTransfer" style="background-color: #28a745; color: white">Transfere effectué</button>
                                 </div>
                             </div>
                         </div>
@@ -303,7 +303,7 @@
                         <div class="container-fluid p-2">
                             <div class="row">
                                 <div class="col-12 title">
-                                    <h3>Current Account Statement</h3>
+                                    <h3>Relevé de compte courant</h3>
                                 </div>
                             </div>
                             <div class="row">
@@ -315,9 +315,9 @@
                                                     <tr>
                                                         <th>Date</th>
                                                         <th>Description</th>
-                                                        <th class="text-center">Withdrawn</th>
-                                                        <th class="text-center">Deposit</th>
-                                                        <th class="text-center">New Balance</th>
+                                                        <th class="text-center">Retrait</th>
+                                                        <th class="text-center">Dépot</th>
+                                                        <th class="text-center">Nouveau solde</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody id="currentStatementContents">
@@ -333,39 +333,39 @@
                         <div class="container-fluid p-2" style="position: relative; top: 54px;">
                             <div class="row">
                                 <div class="col-12 title">
-                                    <h4 style="font-size: 35px;">Savings Account</h4>
+                                    <h4 style="font-size: 35px;">Compte épargne</h4>
                                 </div>
                             </div>
                             <div class="row" style="position: relative; top: 20px;">
                                 <div class="col-4" style="color: #00af17">
                                     <div class="card mb-3" style="background:rgba(51, 51, 51, 0.8); color: white; min-height:150px;">
-                                        <div class="card-header"><i class="fad fa-fw fa-money-bill-wave"></i> Savings Account Balance:</div>
+                                        <div class="card-header"><i class="fad fa-fw fa-money-bill-wave"></i> Solde compte épargne:</div>
                                         <div class="card-body">
                                             <h5 class="card-title">&#36;&nbsp;<span id="savingsBalance"></span></h5>
-                                            <p class="card-text" style="font-size: 10px; color: white;">This is currently how much you have saved in your savings account</p>
+                                            <p class="card-text" style="font-size: 10px; color: white;">C'est actuellement combien vous avez économisé sur votre compte d'épargne</p>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="col-8">
                                     <div class="card mb-3" style="background:rgba(51, 51, 51, 0.8); color: white;">
-                                        <div class="card-header">Savings Withdraw & Deposits</div>
+                                        <div class="card-header">Retrait d'épargne et dépôts</div>
                                         <div class="card-body">
                                             <div class="container-fluid">
                                                 <div class="row">
                                                     <div class="col-4"><label for="savingsAction"><small>Action</small></label>
                                                         <select name="savingsAction" id="savingsAction" class="form-control" style="font-size: 13px;">
-                                                        <option selected disabled value="def">Please Select</option>
-                                                        <option value="deposit">Deposit</option>
-                                                        <option value="withdraw">Withdrawal</option>
+                                                        <option selected disabled value="def">Selectionner</option>
+                                                        <option value="deposit">Dépot</option>
+                                                        <option value="withdraw">Retrait</option>
                                                     </select>
                                                     </div>
                                                     <div class="col-4">
-                                                        <label for="savingsTAmount"><small>Amount</small></label>
+                                                        <label for="savingsTAmount"><small>Montant</small></label>
                                                         <input type="number" id="savingsTAmount" name="savingsTAmount" class="form-control" placeholder="$" style="font-size: 13px;">
                                                     </div>
                                                     <div class="col-4 my-auto">
-                                                        <button class="btn btn-block" id="makeSavingsTransfer" style="background-color: #28a745; font-size: 12px; color: white">Complete Request</button>
+                                                        <button class="btn btn-block" id="makeSavingsTransfer" style="background-color: #28a745; font-size: 12px; color: white">Effectué</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -376,16 +376,16 @@
                         </div>
                         <div style="position: relative; top: 60px">
                             <div class="card mb-3" style="background:rgba(51, 51, 51, 0.8); color: white;">
-                                <div class="card-header">Savings Account Statement</div>
+                                <div class="card-header">Etat du compte épargne</div>
                                 <div class="card-body">
                                     <table id="savingsStatement" class="display" style="width:100%">
                                         <thead>
                                             <tr style="font-size: 14px; color: white;">
                                                 <th>Date</th>
                                                 <th>Description</th>
-                                                <th class="text-center">Withdrawn</th>
-                                                <th class="text-center">Deposit</th>
-                                                <th class="text-center">New Balance</th>
+                                                <th class="text-center">Retrait</th>
+                                                <th class="text-center">Dépot</th>
+                                                <th class="text-center">Solde</th>
                                             </tr>
                                         </thead>
                                         <tbody id="savingsStatementContents" style="font-size: 14px;">
@@ -399,29 +399,29 @@
                         <div class="container-fluid p-2">
                             <div class="row">
                                 <div class="col-12 title">
-                                    <h3 style="font-size: 35px;">Account Options</h3>
+                                    <h3 style="font-size: 35px;">Options</h3>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-12 content" style="font-size: 12px;">
-                                    <p>From within the Account options section you are able to manage every aspect of your banking experience with QBCore Banks, from ordering a new debit card, changing your pins, and even create a savings account.</p>
+                                    <p>Dans la section Options de compte, vous pouvez gérer tous les aspects de votre expérience bancaire, de la commande d'une nouvelle carte de débit, à la modification de vos codes PIN et même à la création d'un compte d'épargne.</p>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-12">
                                     <div class="card mb-3" style="background:rgba(51, 51, 51, 0.8); color: white;">
-                                        <div class="card-header" style="color: white">Debit Card Management</div>
+                                        <div class="card-header" style="color: white">Gestion carte de credit</div>
                                         <div class="card-body">
                                             <!-- Card In-Active Container -->
                                             <div class="container-fluid" id="cardInactive" style="display:none;">
                                                 <div class="row">
                                                     <div class="col-12 content" style="font-size: 16px;">
-                                                        <p>You can order yourself a Debit card to enable you to use ATM's and Pay by card features provided free of charge by QBCore Management.</p>
+                                                        <p>Vous pouvez commander vous-même une carte de crédit pour vous permettre d'utiliser les fonctions de guichet automatique et de paiement par carte fournies gratuitement par votre banque.</p>
                                                     </div>
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-12">
-                                                        <button class="btn btn-block" id="orderCardBtn" style="background:#28a745; color: white;">Order Debit Card</button>
+                                                        <button class="btn btn-block" id="orderCardBtn" style="background:#28a745; color: white;">Commander une carte</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -429,7 +429,7 @@
                                             <div class="container-fluid" id="cardOrdering" style="display:none;">
                                                 <div class="row">
                                                     <div class="col-12">
-                                                        <p>To order a new debit card you first need to set a Personal Identification Number (PIN) this allows you to use your card at ATM's</p>
+                                                        <p>Pour commander une nouvelle carte de crédit, vous devez d'abord définir un numéro d'identification personnel (PIN) qui vous permet d'utiliser votre carte aux guichets automatiques</p>
                                                     </div>
                                                 </div>
                                                 <div class="row" id="pinCreatorError" style="display:none;">
@@ -441,14 +441,14 @@
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-3 my-auto">
-                                                        <label for="cardPinNumber"><small>Personal Pin</small></label>
+                                                        <label for="cardPinNumber"><small>Code PIN</small></label>
                                                     </div>
                                                     <div class="col-9">
                                                         <input type="number" maxlength="4" id="cardPinNumber" name="cardPinNumber" class="form-control">
                                                     </div>
                                                 </div>
                                                 <div class="row mt-2">
-                                                    <div class="col-12 text-center "><button class="btn btn-info" id="processCard">Order Card</button></div>
+                                                    <div class="col-12 text-center "><button class="btn btn-info" id="processCard">Commander la carte</button></div>
                                                 </div>
                                             </div>
                                             <!-- Card Active Container -->
@@ -457,39 +457,39 @@
 
                                                     <div class="col-4">
                                                         <div class="card text-white bg-info mb-3" id="debitCardPin" style="min-height:230px">
-                                                            <div class="card-header">Change Pin</div>
-                                                            <div class="card-body">Your pin is currently set.</div>
+                                                            <div class="card-header">Changer le code pin</div>
+                                                            <div class="card-body">Code PIN modifié.</div>
                                                             <div class="card-footer">
-                                                                <button class="btn btn-primary btn-block" id="changePin">Change PIN</button>
+                                                                <button class="btn btn-primary btn-block" id="changePin">Changer le code PIN</button>
                                                             </div>
                                                         </div>
                                                     </div>
 
                                                     <div class="col-4">
                                                         <div class="card text-white bg-dark mb-3" id="requestNewCard1" style="min-height:230px; display:block;">
-                                                            <div class="card-header">Request New Card</div>
-                                                            <div class="card-body">Current Active Card<br>
+                                                            <div class="card-header">Demander une nouvelle carte</div>
+                                                            <div class="card-body">Carte actuelle<br>
                                                                 <small><span id="cardType">Visa</span><br>
                                                                         <span id="cardNumberShow">************3455</span></small>
                                                             </div>
                                                             <div class="card-footer">
-                                                                <button class="btn btn-primary btn-block" id="makeNewCardRequestBtn1">Make Request</button>
+                                                                <button class="btn btn-primary btn-block" id="makeNewCardRequestBtn1">Faire une demande</button>
                                                             </div>
                                                         </div>
 
                                                         <div class="card text-white bg-dark mb-3" id="requestNewCard2" style="min-height:230px; display:none;">
-                                                            <div class="card-header">Confirm Request</div>
-                                                            <div class="card-body"><small>By making this request your old card will be blocked.</small>
+                                                            <div class="card-header">Confirmer la demande</div>
+                                                            <div class="card-body"><small> En faisant cette demande, votre ancienne carte sera bloquée.</small>
 
                                                             </div>
                                                             <div class="card-footer text-center">
-                                                                <button class="btn btn-success btn-sm" id="confirmCardRequest">Confirm</button> <button class="btn btn-danger btn-sm" id="cancelNewCardReq">Cancel</button>
+                                                                <button class="btn btn-success btn-sm" id="confirmCardRequest">Confirmer</button> <button class="btn btn-danger btn-sm" id="cancelNewCardReq">Cancel</button>
                                                             </div>
                                                         </div>
 
                                                         <div class="card text-white bg-success mb-3" id="requestNewCard3" style="min-height:230px; display:none;">
-                                                            <div class="card-header">Request Confirmed</div>
-                                                            <div class="card-body"><small>You have received a new card, and your previous one has been blocked.</small>
+                                                            <div class="card-header">Confirmé</div>
+                                                            <div class="card-body"><small>Vous avez reçu une nouvelle carte et votre précédente a été bloquée.</small>
 
                                                             </div>
                                                             <div class="card-footer text-center">
@@ -499,10 +499,10 @@
 
                                                     <div class="col-4">
                                                         <div class="card text-white bg-success mb-3" id="debitCardStatus" style="min-height:230px">
-                                                            <div class="card-header">Card Unlocked</div>
-                                                            <div class="card-body">Your card is currently active.</div>
+                                                            <div class="card-header">Carte déverouillée</div>
+                                                            <div class="card-body">Votre carte est active.</div>
                                                             <div class="card-footer">
-                                                                <button class="btn btn-primary btn-block" id="lockCard">Lock/Block Card</button>
+                                                                <button class="btn btn-primary btn-block" id="lockCard">Bloquer votre carte</button>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -510,7 +510,7 @@
                                                 <div class="row" id="createNewPin" style="display:none;">
                                                     <div class="col-12">
                                                         <div class="card bg-light mb-3">
-                                                            <div class="card-header">Create a New Pin</div>
+                                                            <div class="card-header">Créer nouveau code</div>
                                                             <div class="card-body">
                                                                 <div class="container-fluid">
                                                                     <div class="row" id="newPinReqMsgDiv" style="display:none;">
@@ -521,11 +521,11 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="row">
-                                                                        <div class="col-3 my-aut"><label for="newPinNumber"><small>New Pin Number</small></label></div>
+                                                                        <div class="col-3 my-aut"><label for="newPinNumber"><small>Nouveau code pin</small></label></div>
                                                                         <div class="col-9"><input type="number" class="form-control" id="newPinNumber" name="newPinNumber"></div>
                                                                     </div>
                                                                     <div class="row mt-2">
-                                                                        <div class="col-12 text-center"><button class="btn btn-success" id="updateNewPin">Update Pin</button></div>
+                                                                        <div class="col-12 text-center"><button class="btn btn-success" id="updateNewPin">Mise à jour du code</button></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -540,23 +540,23 @@
                             <div class="row" id="savingAccountCreator" style="display:none;">
                                 <div class="col-12">
                                     <div class="card mb-3" style="background:rgba(51, 51, 51, 0.8); color: white;">
-                                        <div class="card-header">Savings Account Management</div>
+                                        <div class="card-header">Option du compte épargne</div>
                                         <div class="card-body">
                                             <div class="container-fluid">
                                                 <div class="row">
                                                     <div class="col-12 content" style="font-size: 16px;">
-                                                        <p>You have not yet opened a savings account with QBCore Banks, click the button below to open a personal savings account, with a seperate account number and sort code.</p>
+                                                        <p>Vous n'avez pas encore ouvert de compte d'épargne auprès de la banque, cliquez sur le bouton ci-dessous pour ouvrir un compte d'épargne personnel, avec un numéro de compte et un code séparés.</p>
                                                     </div>
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-12">
-                                                        <button class="btn btn-block mt-2" style="background:#28a745; color: white;" id="openSavings">Open Savings Account</button>
+                                                        <button class="btn btn-block mt-2" style="background:#28a745; color: white;" id="openSavings">Ouvrir un compte épargne</button>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="card-footer">
-                                            <p class="card-text"><small>This sections allows you to eaily manage your savings account.</small></p>
+                                            <p class="card-text"><small>Cette rubrique vous permet de gérer facilement votre compte épargne.</small></p>
                                         </div>
                                     </div>
                                 </div>
